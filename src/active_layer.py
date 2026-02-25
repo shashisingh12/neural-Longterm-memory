@@ -16,11 +16,12 @@ Per-Turn Flow (MAC Eq. 21-25 + ring buffer):
 
 Key difference from TitansMemoryLayer:
     - MLP memory actively drives context via attention + gating
-    - No unbounded cosine RAG store
-    - Fixed-size ring buffer with MLP-space scoring
+    - No cosine RAG store
+    - FAISS-backed hybrid transcript (persistent) or ring buffer (bounded)
 
 Key difference from MACMemoryLayer:
-    - Ring buffer replaces TextDecoder (bounded, MLP-scored)
+    - Hybrid transcript or ring buffer replaces TextDecoder
+    - FAISS inner-product search over MLP-gated vectors
     - Full training support via ActiveOuterLoopTrainer
 """
 
@@ -35,6 +36,7 @@ from .neural_memory import NeuralMemoryMLP
 from .persistent_memory import PersistentMemory
 from .attention import MemoryAttention, PersistentMemoryVectors
 from .memory_transcript import MemoryTranscript
+from .hybrid_transcript import HybridMemoryTranscript
 from .utils import get_device
 
 
@@ -72,12 +74,19 @@ class ActiveMemoryLayer:
         # Self-attention module (Eq. 23)
         self.attention = MemoryAttention(config).to(self.device)
 
-        # Fixed-size ring buffer (replaces TextDecoder)
-        self.transcript = MemoryTranscript(
-            max_size=config.memory_transcript_size,
-            top_k=config.top_k,
-            device=self.device,
-        )
+        # Memory transcript: FAISS hybrid (persistent) or ring buffer (fixed-size)
+        if config.use_hybrid_transcript:
+            self.transcript = HybridMemoryTranscript(
+                d_model=config.d_model,
+                top_k=config.top_k,
+                device=self.device,
+            )
+        else:
+            self.transcript = MemoryTranscript(
+                max_size=config.memory_transcript_size,
+                top_k=config.top_k,
+                device=self.device,
+            )
 
         # Text-based persistent memory (for prompt building)
         self.persistent = PersistentMemory(
@@ -156,7 +165,8 @@ class ActiveMemoryLayer:
 
         if self.verbose:
             elapsed = time.time() - t0
-            print(f"  Transcript: {len(self.transcript)}/{self.config.memory_transcript_size}")
+            cap = self.config.memory_transcript_size if not self.config.use_hybrid_transcript else "unbounded"
+            print(f"  Transcript: {len(self.transcript)}/{cap}")
             print(f"  Surprise: {surprise:.4f} | elapsed: {elapsed:.3f}s")
 
         return response
@@ -217,11 +227,13 @@ class ActiveMemoryLayer:
         attn_params = sum(p.numel() for p in self.attention.parameters())
         persist_params = sum(p.numel() for p in self.persistent_vectors.parameters())
         enc_proj_params = sum(p.numel() for p in self.encoder.projection.parameters())
+        is_hybrid = self.config.use_hybrid_transcript
         return {
-            "architecture": "Active Memory (MAC + Ring Buffer)",
+            "architecture": "Active Memory (MAC + FAISS Hybrid)" if is_hybrid else "Active Memory (MAC + Ring Buffer)",
             "turns_seen": self._turn,
             "transcript_entries": len(self.transcript),
-            "transcript_capacity": self.config.memory_transcript_size,
+            "transcript_backend": "faiss" if is_hybrid else "ring_buffer",
+            "transcript_capacity": "unbounded" if is_hybrid else self.config.memory_transcript_size,
             "memory_mlp_params": int(mem_params),
             "attention_params": int(attn_params),
             "persistent_vector_params": int(persist_params),

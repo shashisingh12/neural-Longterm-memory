@@ -47,6 +47,7 @@ class TitansConfig:
 
     # ── Active Memory Layer ──────────────────────────────
     memory_transcript_size: int = 32     # ring buffer capacity (replaces unbounded RAG store)
+    use_hybrid_transcript: bool = True   # use FAISS-backed hybrid transcript (persistent, no eviction)
     train_attention: bool = True         # train attention params in outer loop
     train_persistent_vectors: bool = True  # train persistent vectors in outer loop
 
@@ -152,6 +153,11 @@ def build_parser() -> argparse.ArgumentParser:
     # Active Memory Layer
     p.add_argument("--memory-transcript-size", type=int, default=32,
                     help="Ring buffer capacity for active memory transcript (default: 32)")
+    p.add_argument("--use-hybrid-transcript", action="store_true", default=True,
+                    help="Use FAISS-backed hybrid transcript (persistent, no eviction) (default: True)")
+    p.add_argument("--no-hybrid-transcript", dest="use_hybrid_transcript",
+                    action="store_false",
+                    help="Use fixed-size ring buffer instead of FAISS hybrid transcript")
     p.add_argument("--train-attention", action="store_true", default=True,
                     help="Train attention params in outer loop (default: True)")
     p.add_argument("--no-train-attention", dest="train_attention",

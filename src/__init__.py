@@ -17,6 +17,7 @@ from .trainer import OuterLoopTrainer, ActiveOuterLoopTrainer
 from .mac_layer import MACMemoryLayer
 from .active_layer import ActiveMemoryLayer
 from .memory_transcript import MemoryTranscript
+from .hybrid_transcript import HybridMemoryTranscript
 from .attention import MemoryAttention, PersistentMemoryVectors
 from .parallel_memory import (
     ChunkedLinearMemoryUpdate,
@@ -37,6 +38,7 @@ __all__ = [
     "MemoryAttention",
     "ActiveMemoryLayer",
     "MemoryTranscript",
+    "HybridMemoryTranscript",
     "OuterLoopTrainer",
     "ActiveOuterLoopTrainer",
     "ChunkedLinearMemoryUpdate",
