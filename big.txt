@@ -1,0 +1,113 @@
+Python is a high-level programming language created by Guido van Rossum in 1991.
+Python uses indentation instead of curly braces to define code blocks.
+List comprehensions in Python provide a concise way to create and transform lists.
+Python supports multiple paradigms including procedural, object-oriented, and functional programming.
+The pip package manager installs third-party libraries from the Python Package Index.
+NumPy is a Python library for fast numerical computing with multi-dimensional arrays.
+Pandas provides DataFrame objects for efficient tabular data manipulation in Python.
+Flask is a lightweight Python web framework for building REST APIs and small web apps.
+Django is a full-featured Python web framework that follows the model-view-template pattern.
+PyTorch is a deep learning framework developed by Meta AI for tensor computation and automatic differentiation.
+Machine learning models learn patterns and relationships from labeled training data.
+Supervised learning uses input-output pairs to train a predictive model.
+Unsupervised learning discovers hidden structure and clusters in unlabeled data.
+Semi-supervised learning combines a small amount of labeled data with a large amount of unlabeled data.
+Gradient descent optimizes model parameters by moving in the direction of steepest loss decrease.
+Stochastic gradient descent uses random mini-batches instead of the full dataset for faster updates.
+Overfitting occurs when a model memorizes training data but fails to generalize to unseen examples.
+Regularization techniques like L1, L2, and dropout help prevent overfitting in neural networks.
+Cross-validation splits data into multiple folds to get a robust estimate of model performance.
+Feature engineering transforms raw data into meaningful input features suitable for machine learning models.
+The bias-variance tradeoff describes the balance between underfitting and overfitting a model.
+Hyperparameter tuning searches for the best configuration of learning rate, batch size, and architecture.
+Neural networks are composed of layers of interconnected artificial neurons with learnable weights.
+Backpropagation computes gradients efficiently by applying the chain rule layer by layer from output to input.
+Activation functions like ReLU, sigmoid, and tanh introduce nonlinearity into neural networks.
+Convolutional neural networks use learned filters to detect spatial patterns and features in images.
+Pooling layers in CNNs reduce spatial dimensions while retaining the most important features.
+Recurrent neural networks process sequential data by maintaining a hidden state across time steps.
+Long short-term memory networks use gates to control information flow and solve the vanishing gradient problem.
+The transformer architecture replaces recurrence with self-attention for parallel sequence processing.
+Self-attention computes a weighted sum over all input positions based on query-key similarity.
+Multi-head attention runs several attention heads in parallel to capture different types of relationships.
+Positional encoding injects sequence order information into transformer models since they lack recurrence.
+BERT is a bidirectional encoder trained with masked language modeling and next sentence prediction.
+GPT is an autoregressive language model that generates text by predicting one token at a time.
+The attention mechanism in transformers computes softmax of Q times K-transpose divided by square root of d.
+Layer normalization stabilizes training by normalizing activations across the feature dimension.
+Residual connections add the input of a layer directly to its output to ease gradient flow.
+The feed-forward network in each transformer block consists of two linear layers with a ReLU activation.
+Tokenizers convert raw text into numerical token IDs that language models can process.
+Byte-pair encoding is a subword tokenization algorithm that merges frequent character pairs iteratively.
+Word embeddings represent discrete words as dense continuous vectors that capture semantic meaning.
+Word2Vec learns word embeddings by predicting context words from a target word or vice versa.
+Transfer learning applies knowledge from a pretrained model to a new downstream task.
+Fine-tuning adapts a pretrained model to a specific domain by training on task-specific data.
+Few-shot learning enables models to generalize from only a handful of labeled examples.
+Zero-shot learning allows models to perform tasks they were never explicitly trained on.
+Reinforcement learning trains agents to make sequential decisions by maximizing cumulative reward.
+The reward function in reinforcement learning defines what the agent should optimize for.
+Q-learning estimates the value of taking an action in a given state to find the optimal policy.
+Policy gradient methods directly optimize the policy function using gradient ascent on expected reward.
+The Titans architecture stores long-term memory directly in MLP weight matrices.
+Surprise-driven gradients in Titans decide which information is important enough to memorize.
+Momentum in Titans memory preserves context from recent surprising observations.
+Weight decay in Titans acts as a forgetting mechanism that gradually erases old memories.
+The inner loop in Titans updates MLP weights on-the-fly using the surprise-momentum-forgetting rule.
+The outer loop in Titans trains projection matrices W_K, W_V, and W_Q via meta-learning.
+The associative memory loss in Titans measures how well the MLP can recall values from keys.
+MAC architecture in Titans combines persistent vectors, memory read output, and current input via attention.
+Persistent memory vectors in Titans encode stable task-level knowledge that is always available.
+Parallel associative scan enables efficient chunked memory updates in the Titans architecture.
+The forgetting gate alpha controls how quickly old information decays from the MLP memory.
+The momentum decay eta determines how long the effect of a surprising observation persists.
+The inner-loop learning rate theta controls the step size of each memory write update.
+Databases store structured data in tables with rows and columns linked by primary and foreign keys.
+SQL is the standard language for querying and manipulating relational databases.
+NoSQL databases like MongoDB store data in flexible document formats instead of rigid tables.
+Redis is an in-memory key-value store used for caching and real-time data processing.
+REST APIs use HTTP methods like GET, POST, PUT, and DELETE to perform CRUD operations.
+GraphQL allows clients to request exactly the data they need in a single query.
+Docker containers package applications with their dependencies for consistent deployment across environments.
+Kubernetes orchestrates container deployment, scaling, and management across clusters of machines.
+Git is a distributed version control system that tracks changes to source code over time.
+Continuous integration automatically builds and tests code whenever changes are pushed to a repository.
+Microservices architecture splits an application into small independent services that communicate via APIs.
+Load balancers distribute incoming network traffic across multiple servers to ensure availability.
+Caching stores frequently accessed data in fast storage to reduce latency and database load.
+Message queues like RabbitMQ and Kafka enable asynchronous communication between distributed services.
+OAuth 2.0 is an authorization framework that allows third-party applications to access user resources securely.
+JSON Web Tokens encode claims between two parties as a compact URL-safe string for authentication.
+HTTPS encrypts data in transit using TLS to prevent eavesdropping and tampering.
+Hashing algorithms like SHA-256 produce fixed-length digests from arbitrary input data.
+The TCP protocol provides reliable ordered delivery of data between applications over a network.
+DNS translates human-readable domain names into IP addresses that computers use to communicate.
+Gradient clipping prevents exploding gradients by capping the norm of the gradient vector during training.
+Batch normalization normalizes layer inputs across the mini-batch to accelerate training convergence.
+The Adam optimizer combines momentum with adaptive per-parameter learning rates for efficient optimization.
+Learning rate warmup gradually increases the learning rate at the start of training to stabilize updates.
+Cosine annealing smoothly decreases the learning rate following a cosine curve over the training schedule.
+Mixed precision training uses both float16 and float32 to speed up computation while maintaining accuracy.
+Data augmentation creates new training examples by applying random transformations to existing data.
+Gradient accumulation simulates larger batch sizes by summing gradients over multiple forward passes.
+Knowledge distillation trains a smaller student model to mimic the outputs of a larger teacher model.
+Pruning removes redundant weights from a neural network to reduce model size and inference cost.
+Quantization reduces the bit precision of model weights from float32 to int8 for faster inference.
+The softmax function converts a vector of raw logits into a probability distribution that sums to one.
+Cross-entropy loss measures the difference between predicted probabilities and true labels in classification.
+Mean squared error loss computes the average squared difference between predictions and targets in regression.
+Focal loss down-weights easy examples and focuses training on hard misclassified samples.
+Contrastive loss pulls similar pairs closer and pushes dissimilar pairs apart in embedding space.
+Generative adversarial networks pit a generator against a discriminator in a minimax game.
+Variational autoencoders learn a latent representation by maximizing the evidence lower bound.
+Diffusion models generate data by learning to reverse a gradual noise-adding process step by step.
+Retrieval-augmented generation combines document retrieval with language model generation for factual answers.
+Prompt engineering crafts input instructions to steer large language models toward desired outputs.
+Chain-of-thought prompting encourages models to show intermediate reasoning steps before the final answer.
+RLHF uses human preference rankings to fine-tune language models for helpfulness and safety.
+Mixture of experts routes each input to a subset of specialized sub-networks for efficient scaling.
+Sparse attention reduces the quadratic cost of self-attention by attending to only a subset of positions.
+Flash attention computes exact attention with reduced memory usage by tiling and recomputation.
+Rotary position embeddings encode relative position information directly into the attention computation.
+Grouped query attention shares key-value heads across multiple query heads to reduce memory bandwidth.
+Speculative decoding uses a small draft model to propose tokens that a larger model verifies in parallel.
