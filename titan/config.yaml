@@ -1,0 +1,55 @@
+# ============================================================
+#  Joint Training Configuration
+#  M_t + Adapter + LoRA (Phase 1)
+# ============================================================
+
+# ── LLM Backbone ────────────────────────────────────────────
+model_name: "microsoft/bitnet-b1.58-2B-4T-bf16"
+torch_dtype: "bfloat16"          # float32 | float16 | bfloat16
+
+# ── Memory M_t ──────────────────────────────────────────────
+d_mem: 64                        # memory vector dimension
+mem_num_layers: 2                # layers in M_t MLP
+mem_momentum_decay: 0.90
+mem_forget: 0.02
+
+# ── Alpha Network (surprise → write strength) ───────────────
+alpha_hidden: 16                 # hidden dim in alpha_net MLP
+alpha_scale_init: 0.5            # initial max alpha output
+
+# ── Adapter ─────────────────────────────────────────────────
+adapter_gate_hidden: 16
+adapter_alpha_init: 0.1          # initial conditioning strength
+
+# ── LoRA ────────────────────────────────────────────────────
+lora_rank: 8
+lora_alpha: 16.0
+lora_layers: [0, 1, 14, 15, 28, 29]
+lora_targets: ["q_proj", "v_proj"]
+
+# ── Phase 1 Training ────────────────────────────────────────
+lr_lora: 2.0e-5
+lr_memory: 1.0e-4
+lr_adapter: 1.0e-4
+weight_decay_lora: 0.01
+weight_decay_memory: 0.001
+weight_decay_adapter: 0.01
+n_epochs: 1
+max_seq_len: 256
+grad_clip: 1.0
+inner_loss_weight: 0.1           # weight for M_t inner loss
+
+# ── Text Encoder ────────────────────────────────────────────
+encoder_d_model: 64              # should match d_mem
+encoder_seed: 0
+
+# ── Runtime ─────────────────────────────────────────────────
+device: "cpu"                    # cpu | cuda | mps
+seed: 42
+verbose: false
+checkpoint_path: ""
+trust_remote_code: false
+
+# ── Data ────────────────────────────────────────────────────
+data: "conversations.json"
+create_sample_data: false

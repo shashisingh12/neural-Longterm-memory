@@ -1,0 +1,292 @@
+[
+
+  [
+    ["My name is Alice and I'm 32 years old.", "Nice to meet you, Alice! I'll remember that you're 32."],
+    ["I live in San Francisco with my cat Mochi.", "San Francisco is a great city! And Mochi is a cute name for a cat."],
+    ["I work as a data scientist at a startup called NeuralPath.", "Data science at NeuralPath — that sounds like interesting work!"],
+    ["My favorite programming language is Python, but I also use R sometimes.", "Python is a great choice for data science, and R is excellent for statistical analysis."],
+    ["What do you know about me so far?", "You're Alice, 32 years old, living in San Francisco with your cat Mochi. You work as a data scientist at NeuralPath, and you prefer Python but also use R."],
+    ["What's my cat's name?", "Your cat's name is Mochi."],
+    ["Where do I work?", "You work at NeuralPath as a data scientist."]
+  ],
+
+  [
+    ["I'm Bob. I have type 2 diabetes.", "Hello Bob. I'll keep in mind that you have type 2 diabetes — that's important health information."],
+    ["My doctor is Dr. Sarah Chen at the Bay Area Medical Center.", "Noted — Dr. Sarah Chen at Bay Area Medical Center is your doctor."],
+    ["I take metformin 500mg twice daily.", "I'll remember your medication: metformin 500mg twice daily."],
+    ["I'm allergic to penicillin.", "That's a critical allergy to note — you're allergic to penicillin."],
+    ["My blood sugar was 140 this morning.", "A fasting blood sugar of 140 mg/dL is above the normal range. You may want to discuss this with Dr. Chen."],
+    ["What medications am I on?", "You take metformin 500mg twice daily for your type 2 diabetes."],
+    ["Do I have any allergies?", "Yes, you're allergic to penicillin."],
+    ["Who is my doctor?", "Your doctor is Dr. Sarah Chen at the Bay Area Medical Center."]
+  ],
+
+  [
+    ["The weather is nice today.", "Glad to hear the weather is nice!"],
+    ["What is 15 times 23?", "15 times 23 equals 345."],
+    ["My daughter Emma just turned 5 yesterday.", "Happy birthday to Emma! Five is such a fun age."],
+    ["Can you tell me a fun fact?", "Sure — octopuses have three hearts and blue blood."],
+    ["What's my daughter's name and how old is she?", "Your daughter is Emma and she just turned 5."],
+    ["How's the weather?", "You mentioned earlier that the weather is nice today."]
+  ],
+
+  [
+    ["I'm training for the Boston Marathon in April.", "That's an ambitious goal! The Boston Marathon is a prestigious race."],
+    ["My current best marathon time is 3 hours 45 minutes.", "A 3:45 marathon is a solid time. What's your target for Boston?"],
+    ["I want to break 3 hours 30 minutes.", "Breaking 3:30 would be a great achievement — that's about a 15 minute improvement."],
+    ["I run about 50 miles per week right now.", "50 miles per week is a strong training base for a marathon."],
+    ["I had a knee injury last year that still bothers me sometimes.", "You should be careful with that knee, especially with your mileage. Have you consulted a sports medicine doctor?"],
+    ["What's my marathon goal?", "You want to break 3 hours 30 minutes at the Boston Marathon in April. Your current best is 3:45."],
+    ["How much am I running per week?", "You're running about 50 miles per week."],
+    ["Any health concerns you remember about me?", "Yes — you had a knee injury last year that still bothers you sometimes. Given your 50 miles per week training load, you should monitor it carefully."]
+  ],
+
+  [
+    ["I'm a vegetarian and I'm also lactose intolerant.", "Got it — vegetarian and lactose intolerant. I'll keep that in mind for any food-related suggestions."],
+    ["My favorite cuisine is Thai food.", "Thai food is a great choice for vegetarians — lots of tofu and vegetable dishes."],
+    ["I love cooking but I'm terrible at baking.", "Cooking and baking are quite different skills! Baking requires more precision."],
+    ["Can you suggest a dinner idea for me?", "How about a Thai green curry with tofu, vegetables, and coconut milk? It's vegetarian, dairy-free since it uses coconut milk, and it's Thai cuisine which you love."],
+    ["What dietary restrictions do I have?", "You're vegetarian and lactose intolerant."],
+    ["What kind of food do I like?", "Your favorite cuisine is Thai food. You also enjoy cooking but not baking."]
+  ],
+
+  [
+    ["My name is Carlos. I speak Spanish, English, and Portuguese.", "Hello Carlos! Being trilingual is impressive — Spanish, English, and Portuguese."],
+    ["I grew up in Mexico City but moved to Lisbon three years ago.", "That's quite a move — from Mexico City to Lisbon. The Portuguese must come in handy there."],
+    ["I'm a software engineer specializing in backend systems.", "Backend engineering is a solid specialty. What tech stack do you work with?"],
+    ["I mainly use Go and PostgreSQL at work.", "Go and PostgreSQL are excellent choices for backend systems — great performance and reliability."],
+    ["I'm thinking about learning Rust.", "Rust would complement your Go skills well — they're both systems-level languages but Rust has stronger memory safety guarantees."],
+    ["Where do I live now?", "You live in Lisbon, Portugal. You moved there three years ago from Mexico City."],
+    ["What languages do I speak?", "You speak Spanish, English, and Portuguese."],
+    ["What's my tech stack?", "You primarily use Go and PostgreSQL for backend systems engineering."]
+  ],
+
+  [
+    ["I just adopted a rescue dog named Luna. She's a 3-year-old husky mix.", "Congratulations on adopting Luna! Husky mixes are beautiful and energetic dogs."],
+    ["Luna is afraid of thunderstorms and loud noises.", "That's common in rescue dogs. There are desensitization techniques and anxiety wraps that can help Luna with noise phobia."],
+    ["She loves peanut butter and going to the dog park.", "Peanut butter is a great treat for training! Just make sure it doesn't contain xylitol."],
+    ["My other dog Rex passed away last year. He was 14.", "I'm sorry for your loss. 14 years is a long life, and I'm sure Rex was well-loved."],
+    ["Tell me about my pets.", "You recently adopted Luna, a 3-year-old husky mix rescue dog. She's afraid of thunderstorms and loves peanut butter and the dog park. Your previous dog Rex passed away last year at age 14."],
+    ["What should I be careful about with Luna's treats?", "Make sure any peanut butter you give Luna doesn't contain xylitol, which is toxic to dogs. Also remember she has noise anxiety, so treats can be useful for positive association during storms."]
+  ],
+
+  [
+    ["I have a meeting with the marketing team at 2pm tomorrow.", "Noted — marketing team meeting tomorrow at 2pm."],
+    ["The quarterly report is due next Friday.", "I'll remember — quarterly report deadline is next Friday."],
+    ["I need to send the budget proposal to Jennifer by end of day.", "Don't forget to send the budget proposal to Jennifer today."],
+    ["Actually, Jennifer said I can have until Wednesday.", "Got it — the deadline for the budget proposal to Jennifer is now Wednesday, not today."],
+    ["What's my schedule looking like?", "You have a marketing team meeting tomorrow at 2pm, the quarterly report due next Friday, and the budget proposal for Jennifer is now due Wednesday."],
+    ["When is the budget proposal due?", "The budget proposal for Jennifer is due Wednesday. She extended the original end-of-day deadline."]
+  ],
+
+  [
+    ["I'm studying for the bar exam in July.", "The bar exam is a major milestone. How's your preparation going?"],
+    ["I graduated from Stanford Law last May.", "Stanford Law is an excellent program. Congratulations on graduating!"],
+    ["I want to specialize in environmental law.", "Environmental law is an increasingly important field, especially with climate change litigation growing."],
+    ["My student loans are about $180,000.", "That's a significant amount, but Stanford Law graduates typically have strong earning potential. Have you looked into public service loan forgiveness?"],
+    ["I'm interested in working at Earthjustice after passing the bar.", "Earthjustice is a great organization for environmental law. They're one of the top environmental litigation nonprofits."],
+    ["What are my career plans?", "You graduated from Stanford Law last May and are studying for the bar exam in July. You want to specialize in environmental law and are interested in working at Earthjustice."],
+    ["What do you know about my finances?", "You have about $180,000 in student loans from Stanford Law."]
+  ],
+
+  [
+    ["My mother's birthday is March 15th.", "I'll remember — your mother's birthday is March 15th."],
+    ["She loves gardening and mystery novels.", "Great to know! Those could be helpful for gift ideas."],
+    ["My father passed away two years ago.", "I'm sorry for your loss."],
+    ["My sister Diana lives in London. She's a nurse.", "Your sister Diana is a nurse in London — that's good to know."],
+    ["I try to call my mother every Sunday.", "That's a wonderful routine. Staying connected with family is important."],
+    ["My mother's name is Rosa.", "Thank you — I'll remember your mother's name is Rosa."],
+    ["Tell me about my family.", "Your mother Rosa's birthday is March 15th. She loves gardening and mystery novels, and you call her every Sunday. Your father passed away two years ago. Your sister Diana lives in London and works as a nurse."],
+    ["What should I get my mom for her birthday?", "Since Rosa loves gardening and mystery novels, you could get her some heirloom seeds or a new garden tool set, or the latest book from her favorite mystery author. Her birthday is March 15th."]
+  ],
+
+  [
+    ["I'm renovating my kitchen.", "Kitchen renovations can really transform a home! What are you planning?"],
+    ["The contractor said it will cost about $35,000.", "That's a reasonable budget for a kitchen renovation, depending on scope."],
+    ["I want quartz countertops and a farmhouse sink.", "Quartz countertops are durable and low-maintenance. Farmhouse sinks are both practical and stylish."],
+    ["The work should start on the 20th and take about 6 weeks.", "So you're looking at roughly 6 weeks starting the 20th. Make sure you have a plan for meals while the kitchen is out of commission."],
+    ["My biggest concern is staying on budget.", "That's smart to be mindful of. Kitchen renovations often have unexpected costs. I'd recommend keeping a 10-15% contingency fund above the $35,000 estimate."],
+    ["What are the details of my renovation?", "You're renovating your kitchen with quartz countertops and a farmhouse sink. The contractor estimated $35,000, starting on the 20th for about 6 weeks. Your main concern is staying on budget."],
+    ["Any advice for my renovation?", "Given your budget concerns, keep a 10-15% contingency fund above the $35,000 estimate. Also plan ahead for meals during the 6-week construction period when your kitchen will be unusable."]
+  ],
+
+  [
+    ["I play guitar and piano.", "That's great — two very different but complementary instruments!"],
+    ["I've been playing guitar for 15 years but only started piano 2 years ago.", "So you're quite experienced on guitar. How's the piano learning going?"],
+    ["I'm in a local jazz band called Blue Note Collective.", "Blue Note Collective — nice name! Jazz is great for both guitar and piano."],
+    ["We play at The Velvet Room every other Saturday.", "Every other Saturday at The Velvet Room — sounds like a regular gig."],
+    ["I'm trying to learn Coltrane's Giant Steps on piano.", "Giant Steps is notoriously challenging with its rapid key changes. That's ambitious for someone two years into piano!"],
+    ["What instruments do I play?", "You play guitar, which you've been playing for 15 years, and piano, which you started 2 years ago."],
+    ["Tell me about my music.", "You play guitar (15 years) and piano (2 years). You're in a jazz band called Blue Note Collective that performs at The Velvet Room every other Saturday. You're currently working on Coltrane's Giant Steps on piano."]
+  ],
+
+  [
+    ["I'm traveling to Japan next month for two weeks.", "Japan for two weeks — that sounds like an amazing trip!"],
+    ["I'll be visiting Tokyo, Kyoto, and Osaka.", "Great itinerary — that covers both modern and traditional Japan."],
+    ["I'm vegetarian, will that be difficult in Japan?", "Japan can be tricky for vegetarians since many dishes use dashi (fish stock). Look for shojin ryori (Buddhist temple cuisine) which is fully vegetarian. Kyoto has many options."],
+    ["I want to see the cherry blossoms.", "Cherry blossom season in Japan is magical. Timing varies but usually peaks late March to mid-April depending on the region."],
+    ["I'm staying at a ryokan in Kyoto.", "Staying at a ryokan is a wonderful way to experience traditional Japanese hospitality. Make sure to try the onsen if they have one."],
+    ["Where am I traveling to?", "You're going to Japan next month for two weeks, visiting Tokyo, Kyoto, and Osaka. You're staying at a ryokan in Kyoto."],
+    ["What should I keep in mind about food there?", "Since you're vegetarian, look for shojin ryori (Buddhist temple cuisine) which is fully plant-based. Be aware that many Japanese dishes contain dashi (fish stock). Kyoto especially has good vegetarian options near the temples."]
+  ],
+
+  [
+    ["I'm learning to paint with watercolors.", "Watercolor painting is a beautiful medium! It can be challenging because of its unpredictability."],
+    ["I took a class at the community center last month.", "Community art classes are a great way to learn. Did you enjoy it?"],
+    ["My instructor's name is Maria. She's really talented.", "It's great to have a good instructor. Maria sounds like she knows her craft."],
+    ["I mostly paint landscapes and flowers.", "Landscapes and flowers are classic watercolor subjects — the medium is perfect for capturing natural light and organic forms."],
+    ["I want to eventually sell my paintings at the local farmer's market.", "That's a great goal! Farmer's markets are excellent venues for original artwork."],
+    ["What's my hobby?", "You're learning watercolor painting. You took a class at the community center with an instructor named Maria. You paint landscapes and flowers, and you hope to eventually sell your work at the local farmer's market."]
+  ],
+
+  [
+    ["My son Jake is 10 and my daughter Lily is 7.", "Jake is 10 and Lily is 7 — fun ages!"],
+    ["Jake loves soccer and is on the school team.", "It's great that Jake is playing soccer at the school level."],
+    ["Lily is really into dinosaurs. She wants to be a paleontologist.", "A future paleontologist! That's wonderful — it's great when kids have strong interests."],
+    ["Jake is struggling with math this year.", "Math can be challenging at that age. Have you considered a tutor or extra practice at home?"],
+    ["Lily's birthday is coming up on the 8th.", "Lily's birthday on the 8th — she's turning 8, right?"],
+    ["Yes! She wants a dinosaur-themed party.", "A dinosaur party for her 8th birthday sounds perfect given her love of paleontology!"],
+    ["Tell me about my kids.", "You have two kids: Jake, who is 10, plays soccer on the school team, and is struggling a bit with math. And Lily, who is 7 (turning 8 on the 8th), loves dinosaurs, wants to be a paleontologist, and is having a dinosaur-themed birthday party."],
+    ["What should I get Lily for her birthday?", "Given Lily's passion for dinosaurs and paleontology, you could get her a fossil excavation kit, a dinosaur encyclopedia, or maybe a visit to a natural history museum. Her dinosaur-themed party on the 8th is coming up soon!"]
+  ],
+
+  [
+    ["I just started a new job as a product manager at Stripe.", "Congratulations on the new role at Stripe! Product management at a fintech company must be exciting."],
+    ["My previous job was at Google for 5 years.", "Five years at Google is great experience. That's a strong background for product management."],
+    ["I'm leading the team working on the new invoicing feature.", "The invoicing feature sounds like a key product area. How big is your team?"],
+    ["I have 8 engineers and 2 designers on my team.", "A team of 10 — that's a good-sized product team."],
+    ["The launch deadline is Q2.", "Q2 for the invoicing feature launch — that's coming up. How's progress?"],
+    ["I'm worried we might need to cut some features to hit the deadline.", "That's a common PM challenge. Prioritize the must-have features and consider phasing the nice-to-haves for a v2 release."],
+    ["What am I working on?", "You're a product manager at Stripe, leading a team of 8 engineers and 2 designers on the new invoicing feature, with a Q2 launch deadline. You previously worked at Google for 5 years."],
+    ["What's my concern about the project?", "You're worried about needing to cut features to meet the Q2 deadline for the invoicing feature at Stripe."]
+  ],
+
+  [
+    ["I have two cats: Whiskers and Shadow.", "Two cats! Whiskers and Shadow are great names."],
+    ["Whiskers is a 6-year-old orange tabby.", "Orange tabbies are known for being friendly and sociable!"],
+    ["Shadow is a 3-year-old black cat. She's very shy.", "Shy black cats often just need time and patience to warm up."],
+    ["Whiskers just had a vet appointment. He needs dental work.", "Dental health is important for cats. Did the vet give you a timeline for the dental work?"],
+    ["The dental surgery is scheduled for next Tuesday.", "Next Tuesday for Whiskers' dental surgery — make sure he fasts the night before as the vet will likely require."],
+    ["Shadow has been hiding more than usual lately.", "Increased hiding can be a sign of stress in cats. Has anything changed in your home recently? The upcoming vet visit for Whiskers might also be affecting her."],
+    ["Tell me about my cats' health.", "Whiskers, your 6-year-old orange tabby, has dental surgery scheduled for next Tuesday. Shadow, your 3-year-old black cat, has been hiding more than usual, which could indicate stress. She's naturally shy so you might want to monitor her behavior."]
+  ],
+
+  [
+    ["I'm reading three books right now.", "Three books at once — that's ambitious! What are they?"],
+    ["Dune by Frank Herbert, Sapiens by Yuval Harari, and a cookbook by Ottolenghi.", "Nice mix — science fiction, history, and cooking. Which one are you enjoying most?"],
+    ["Dune is incredible. I'm about halfway through.", "Dune is a masterpiece. The second half gets even more intense."],
+    ["I usually read before bed for about an hour.", "An hour of reading before bed is a great habit."],
+    ["I want to start a book club with friends.", "A book club is a great idea! You could start with one of the books you're currently reading."],
+    ["What books am I reading?", "You're reading three books: Dune by Frank Herbert, which you're halfway through and loving; Sapiens by Yuval Harari; and a cookbook by Ottolenghi. You read for about an hour before bed."]
+  ],
+
+  [
+    ["My electricity bill was $280 last month which seems high.", "That does seem higher than average. Do you know what's driving the cost up?"],
+    ["I think it's the old AC unit. It's 15 years old.", "A 15-year-old AC unit can be very inefficient. Newer models can reduce energy costs significantly."],
+    ["My landlord said he might replace it this summer.", "That would be good news for your energy bills. A new AC could cut your cooling costs substantially."],
+    ["I also need to fix a leaky faucet in the bathroom.", "A leaky faucet can waste a lot of water over time. Is your landlord handling that repair too?"],
+    ["No, I'm going to try fixing it myself this weekend.", "There are great tutorials online for fixing leaky faucets. You'll usually just need to replace a washer or cartridge."],
+    ["What home issues am I dealing with?", "You have two main issues: an old 15-year-old AC unit that's driving up your electricity bill ($280 last month) — your landlord may replace it this summer. And a leaky bathroom faucet that you plan to fix yourself this weekend."]
+  ],
+
+  [
+    ["I'm training a neural network to detect plant diseases from leaf images.", "That's a really practical application of computer vision! What architecture are you using?"],
+    ["I'm using a ResNet-50 pretrained on ImageNet, then fine-tuning it.", "Transfer learning with ResNet-50 is a solid approach for this kind of image classification task."],
+    ["My dataset has about 50,000 images across 38 disease categories.", "50K images across 38 categories gives you about 1,300 images per class on average. Is the distribution balanced?"],
+    ["It's pretty imbalanced. Some diseases have 5,000 images and some only have 200.", "Class imbalance is a common challenge. You could try weighted loss functions, oversampling the minority classes, or data augmentation specifically for the underrepresented diseases."],
+    ["I'm getting 87% accuracy but the rare diseases have very low recall.", "87% overall is decent, but low recall on rare diseases means the model is essentially ignoring them. Focal loss or class-weighted cross-entropy could help prioritize those harder cases."],
+    ["What's my machine learning project about?", "You're training a ResNet-50 (pretrained on ImageNet) to detect plant diseases from leaf images. Your dataset has 50,000 images across 38 disease categories, but it's imbalanced. You're at 87% overall accuracy but struggling with recall on rare diseases."],
+    ["What should I try to improve my model?", "For your plant disease classifier, try focal loss or class-weighted cross-entropy to address the imbalance. Also consider data augmentation for the underrepresented classes (some only have 200 images) and oversampling minority classes. These should improve recall on the rare diseases."]
+  ],
+
+  [
+    ["Good morning! How are you today?", "Good morning! I'm doing well, thank you for asking."],
+    ["Can you remind me what we talked about yesterday?", "I don't have memory of previous conversations unless you remind me. What would you like to continue discussing?"],
+    ["We were talking about my garden. I'm growing tomatoes and basil.", "Tomatoes and basil are a classic combination! They even grow well together as companion plants."],
+    ["The tomatoes are getting some yellow leaves.", "Yellow leaves on tomatoes can indicate several things: overwatering, nitrogen deficiency, or early blight. Are the yellow leaves at the bottom of the plant?"],
+    ["Yes, just the bottom ones.", "Bottom leaves yellowing first is usually normal — the plant redirects nutrients upward to the fruiting parts. If it's just the lower leaves, it's likely not a problem."],
+    ["What am I growing in my garden?", "You're growing tomatoes and basil. Your tomato plants have some yellow leaves at the bottom, which is likely normal nutrient redistribution."]
+  ],
+
+  [
+    ["I'm moving to Austin, Texas next month from Portland, Oregon.", "That's a big move! Austin and Portland are quite different — are you prepared for the Texas heat?"],
+    ["I got a new job at Dell Technologies.", "Congratulations! Dell's headquarters in Round Rock is right near Austin."],
+    ["My partner Sam is coming with me. They're looking for remote work.", "Having Sam with you will make the transition easier. Remote work opportunities are plentiful in Austin's tech scene."],
+    ["We found an apartment in the East Austin area.", "East Austin is a vibrant neighborhood with great food and music scene."],
+    ["Our lease starts on the first of next month.", "So you've got about a month to prepare for the move. Have you started packing?"],
+    ["I'm most nervous about not knowing anyone there.", "It's natural to be nervous. Austin is very friendly and has lots of meetup groups and community events to help you build connections."],
+    ["Tell me about my upcoming move.", "You're moving from Portland, Oregon to an apartment in East Austin, Texas next month (lease starts the 1st) for a new job at Dell Technologies. Your partner Sam is coming with you and looking for remote work. You're nervous about not knowing anyone in the area."]
+  ],
+
+  [
+    ["I need to plan my wedding. It's in September.", "How exciting! September is a lovely month for a wedding. How far along are you in planning?"],
+    ["We want an outdoor ceremony with about 120 guests.", "120 guests for an outdoor September ceremony — have you chosen a venue?"],
+    ["We're looking at a vineyard in Napa Valley.", "A Napa Valley vineyard wedding sounds beautiful. September weather there is usually perfect."],
+    ["Our budget is $50,000.", "For 120 guests in Napa Valley, $50,000 is workable but you'll need to be strategic with allocations."],
+    ["My fiancee Diana wants a live jazz band.", "A live jazz band would set a wonderful atmosphere at a vineyard. That will likely be one of the bigger line items in your budget."],
+    ["We still need to find a photographer and caterer.", "Those are two critical vendors. For a vineyard wedding, some venues offer in-house catering which can simplify things."],
+    ["What are the details of my wedding?", "Your wedding is in September at a vineyard in Napa Valley — outdoor ceremony, about 120 guests, $50,000 budget. Your fiancee Diana wants a live jazz band. You still need to book a photographer and caterer."]
+  ],
+
+  [
+    ["I volunteer at the animal shelter on weekends.", "That's wonderful! Animal shelters always need dedicated volunteers."],
+    ["I mainly help with dog walking and socialization.", "Dog walking and socialization are so important for shelter dogs. It helps them become more adoptable."],
+    ["There's a dog there named Buddy who I've been working with for 3 months.", "Three months is a significant commitment. Is Buddy having trouble getting adopted?"],
+    ["He's a pit bull mix and people are nervous about the breed.", "Breed prejudice against pit bulls is unfortunately common. Socialization work like what you're doing helps show their true temperament."],
+    ["I'm actually thinking about adopting Buddy myself.", "That would be wonderful! After working with him for 3 months, you already know his personality well."],
+    ["Tell me about my volunteer work.", "You volunteer at the animal shelter on weekends, doing dog walking and socialization. You've been working with a pit bull mix named Buddy for 3 months. He's having trouble getting adopted due to breed prejudice, and you're considering adopting him yourself."]
+  ],
+
+  [
+    ["I just got diagnosed with celiac disease.", "That's a significant diagnosis. Celiac disease means you'll need to avoid all gluten. How are you feeling about it?"],
+    ["It explains a lot of my stomach problems over the years.", "Getting answers after years of symptoms must be a relief, even though the dietary changes will be challenging."],
+    ["My gastroenterologist Dr. Patel wants me back in 3 months for a follow-up.", "A 3-month follow-up with Dr. Patel is standard to check how you're responding to the gluten-free diet."],
+    ["I'm finding it really hard to know what's gluten-free at restaurants.", "It is challenging. Many restaurants now have gluten-free menus. Apps like Find Me Gluten Free can help. Also, naturally gluten-free cuisines like Mexican (corn tortillas), Thai, and Indian can be safer options."],
+    ["My wife Sarah has been very supportive learning to cook gluten-free.", "Having Sarah's support in the kitchen makes a huge difference. Cooking at home is the safest way to control your diet."],
+    ["What health issues do I have?", "You were recently diagnosed with celiac disease, which explains your long-standing stomach problems. You need to avoid all gluten. Your gastroenterologist Dr. Patel has a follow-up appointment in 3 months. Your wife Sarah has been supportive, learning to cook gluten-free."]
+  ],
+
+  [
+    ["I speak French fluently and I'm learning Mandarin.", "That's impressive! Mandarin is quite different from French — how long have you been studying?"],
+    ["About 8 months. I'm using Duolingo and a private tutor.", "Combining app learning with a tutor is a great approach. How often do you see the tutor?"],
+    ["Twice a week on Tuesdays and Thursdays.", "Consistent scheduling helps. Are you focusing on conversational Mandarin or also reading and writing characters?"],
+    ["Both, but characters are really hard. I know about 200 so far.", "200 characters in 8 months is good progress! You need about 2,500-3,000 for basic literacy."],
+    ["I'm planning a trip to Shanghai to practice.", "Immersion in Shanghai would accelerate your Mandarin enormously. When are you thinking of going?"],
+    ["What languages do I know?", "You speak French fluently and have been learning Mandarin for 8 months. You study with Duolingo and a private tutor twice a week (Tuesdays and Thursdays). You know about 200 characters so far and are planning a trip to Shanghai for immersion practice."]
+  ],
+
+  [
+    ["I just turned 65 and I'm thinking about retirement.", "Congratulations on turning 65! That's a big milestone. Have you been planning for retirement financially?"],
+    ["I have about $800,000 in my 401k and $200,000 in savings.", "A million dollars total is a solid nest egg. Have you thought about when you want to retire?"],
+    ["I want to retire at the end of this year.", "Retiring at 65 is a common goal. With $1M in savings, the 4% rule would suggest about $40,000 per year in withdrawals."],
+    ["I'll also get about $2,400 per month from Social Security.", "That's $28,800 per year from Social Security, plus potential $40,000 from savings — about $68,800 per year total."],
+    ["My mortgage is paid off, which helps.", "Having no mortgage is a huge advantage in retirement. Your housing costs will be much lower."],
+    ["I'm worried about healthcare costs before Medicare kicks in.", "At 65 you should already be eligible for Medicare. Have you enrolled? The initial enrollment period is around your 65th birthday."],
+    ["What's my financial situation for retirement?", "You have about $1M total: $800,000 in your 401k and $200,000 in savings. You'll receive $2,400/month from Social Security. Your mortgage is paid off. You want to retire at end of year. Using the 4% rule plus Social Security, you'd have about $68,800 per year. You should make sure you've enrolled in Medicare since you just turned 65."]
+  ],
+
+  [
+    ["Actually, I just remembered — my name isn't Alice, it's Alicia.", "Thank you for the correction — I'll update that. Your name is Alicia."],
+    ["And I moved from San Francisco to Seattle last month.", "Got it — you're now in Seattle, not San Francisco anymore."],
+    ["What's my name and where do I live?", "Your name is Alicia and you live in Seattle. You recently moved there from San Francisco."]
+  ],
+
+  [
+    ["I failed my driving test today.", "I'm sorry to hear that. What part did you have trouble with?"],
+    ["I made too many mistakes during parallel parking.", "Parallel parking is one of the trickiest parts. It gets easier with practice."],
+    ["I can retake it in two weeks.", "Two weeks gives you plenty of time to practice. Find an empty parking lot and set up some cones."],
+    ["My instructor's name is Dave. He said I was close.", "If Dave said you were close, that's encouraging. Focus on the parallel parking and you should pass next time."],
+    ["When can I retake my driving test?", "You can retake your driving test in two weeks. Your instructor Dave said you were close — just need to improve your parallel parking."]
+  ],
+
+  [
+    ["I started a small online business selling handmade candles.", "That's a great creative business! Handmade candles are always in demand."],
+    ["My brand is called Ember & Wick.", "Ember & Wick is a catchy name! Where do you sell them?"],
+    ["I sell on Etsy and at local craft fairs.", "Etsy and craft fairs are perfect channels for handmade goods."],
+    ["My best seller is the lavender and honey scent.", "Lavender and honey is a beautiful combination — calming and warm."],
+    ["I made about $3,000 last month.", "$3,000 in a month from a side business is impressive! Is this growing month over month?"],
+    ["Yes, sales have been increasing about 20% each month.", "20% monthly growth is excellent. You might want to think about scaling production soon."],
+    ["Tell me about my business.", "You run Ember & Wick, a handmade candle business. You sell on Etsy and at local craft fairs. Your best seller is the lavender and honey scent. You made $3,000 last month with 20% month-over-month growth."]
+  ]
+
+]
