@@ -47,7 +47,7 @@ import yaml
 from src.joint_config import JointTrainingConfig, build_joint_parser
 from src.memory_llm import MemoryLLM
 from src.joint_trainer import Phase1Trainer
-from src.utils import set_seed
+from src.utils import set_seed, get_device
 
 
 def load_conversations(path: str) -> list:
@@ -153,6 +153,10 @@ def main():
         conversations = create_sample_data(data_path)
     else:
         conversations = load_conversations(data_path)
+
+    # Resolve device early so the banner shows the actual device
+    resolved_device = get_device(config.device)
+    config.device = str(resolved_device)
 
     print("=" * 65)
     print("  PHASE 1 — JOINT TRAINING: M_t + Adapter + LoRA (peft)")

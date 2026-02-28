@@ -17,6 +17,15 @@ def set_seed(seed: int) -> None:
 
 def get_device(requested: str) -> torch.device:
     """Validate and return a torch.device for the requested string."""
+    if requested == "auto":
+        if torch.cuda.is_available():
+            print("[Info] Auto-detected CUDA GPU")
+            return torch.device("cuda")
+        if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+            print("[Info] Auto-detected Apple MPS")
+            return torch.device("mps")
+        print("[Info] No GPU found, using CPU")
+        return torch.device("cpu")
     if requested == "cuda" and not torch.cuda.is_available():
         print("[Warning] CUDA requested but not available, falling back to CPU")
         return torch.device("cpu")

@@ -26,7 +26,7 @@ import torch
 from src.joint_config import JointTrainingConfig
 from src.memory_llm import MemoryLLM
 from src.joint_inference import Phase2Inference
-from src.utils import set_seed
+from src.utils import set_seed, get_device
 
 
 def main():
@@ -42,8 +42,8 @@ def main():
         help="Override model name (default: from checkpoint config)"
     )
     parser.add_argument(
-        "--device", type=str, default="cpu",
-        choices=["cpu", "cuda", "mps"],
+        "--device", type=str, default="auto",
+        choices=["auto", "cpu", "cuda", "mps"],
     )
     parser.add_argument("--verbose", action="store_true", default=False)
     parser.add_argument("--max-new-tokens", type=int, default=150)
@@ -53,14 +53,18 @@ def main():
 
     set_seed(args.seed)
 
+    # resolve device (auto-detect GPU if available)
+    resolved_device = get_device(args.device)
+    device_str = str(resolved_device)
+
     # load config from checkpoint
     state = torch.load(
         args.checkpoint,
-        map_location=args.device,
+        map_location=device_str,
         weights_only=False,
     )
     config = JointTrainingConfig.from_dict(state["config"])
-    config.device = args.device
+    config.device = device_str
     config.verbose = args.verbose
 
     if args.model_name:

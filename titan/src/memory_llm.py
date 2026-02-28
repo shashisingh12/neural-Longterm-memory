@@ -20,6 +20,7 @@ INFERENCE (Phase 2):
 """
 
 import torch
+import torch._dynamo
 import torch.nn as nn
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import LoraConfig, get_peft_model, TaskType
@@ -27,6 +28,7 @@ from peft import LoraConfig, get_peft_model, TaskType
 from .joint_config import JointTrainingConfig
 from .differentiable_memory import DifferentiableNeuralMemory
 from .memory_adapter import MemoryAdapter
+from .utils import get_device
 
 
 class MemoryLLM(nn.Module):
@@ -46,7 +48,7 @@ class MemoryLLM(nn.Module):
     def __init__(self, config: JointTrainingConfig):
         super().__init__()
         self.config = config
-        self.device = torch.device(config.device)
+        self.device = get_device(config.device)
 
         # --- Load pretrained LLM ---
         dtype_map = {
@@ -54,7 +56,7 @@ class MemoryLLM(nn.Module):
             "float16": torch.float16,
             "bfloat16": torch.bfloat16,
         }
-        torch_dtype = dtype_map.get(config.torch_dtype, torch.float32)
+        resolved_dtype = dtype_map.get(config.torch_dtype, torch.float32)
 
         trust_remote = getattr(config, 'trust_remote_code', False)
 
@@ -65,13 +67,20 @@ class MemoryLLM(nn.Module):
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
 
+        device_str = str(self.device)
+
+        # BitNet uses torch.compile (inductor) for weight quantization,
+        # but inductor doesn't support MPS — disable dynamo to use eager mode.
+        if device_str == "mps":
+            torch._dynamo.disable()
+
         base_model = AutoModelForCausalLM.from_pretrained(
             config.model_name,
-            torch_dtype=torch_dtype,
-            device_map=config.device if config.device != "cpu" else None,
+            torch_dtype=resolved_dtype,
+            device_map=device_str if device_str != "cpu" else None,
             trust_remote_code=trust_remote,
         )
-        if config.device == "cpu":
+        if device_str == "cpu":
             base_model = base_model.to(self.device)
 
         # auto-detect d_llm
@@ -94,8 +103,8 @@ class MemoryLLM(nn.Module):
         self.base_model.print_trainable_parameters()
 
         # --- M_t and Adapter (train jointly) ---
-        self.memory = DifferentiableNeuralMemory(config).to(device=self.device, dtype=torch_dtype)
-        self.adapter = MemoryAdapter(config, d_llm).to(device=self.device, dtype=torch_dtype)
+        self.memory = DifferentiableNeuralMemory(config).to(device=self.device, dtype=resolved_dtype)
+        self.adapter = MemoryAdapter(config, d_llm).to(device=self.device, dtype=resolved_dtype)
 
         # --- Embedding hook ---
         self._hook_handle = self._attach_hook()

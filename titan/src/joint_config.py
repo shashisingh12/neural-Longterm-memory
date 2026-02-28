@@ -65,7 +65,7 @@ class JointTrainingConfig:
     encoder_seed: int = 0
 
     # ── Runtime ───────────────────────────────────────────
-    device: str = "cpu"
+    device: str = "auto"
     seed: int = 42
     verbose: bool = False
     checkpoint_path: str = ""
@@ -179,8 +179,8 @@ def build_joint_parser() -> argparse.ArgumentParser:
     p.add_argument("--encoder-seed", type=int, default=0)
 
     # Runtime
-    p.add_argument("--device", type=str, default="cpu",
-                    choices=["cpu", "cuda", "mps"])
+    p.add_argument("--device", type=str, default="auto",
+                    choices=["auto", "cpu", "cuda", "mps"])
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--verbose", action="store_true", default=False)
     p.add_argument("--checkpoint-path", type=str, default="")
